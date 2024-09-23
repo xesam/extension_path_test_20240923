@@ -1,15 +1,13 @@
-## the version of extension.js is `2.0.0-beta.1`.
+## env
+
+sys:Microsoft Windows 10 Home Edition
+
+the version of extension.js is `2.0.0-beta.1`.
 
 `npm list -g | grep 'extension'`, output:
 
 ```
 ⠦├── extension@2.0.0-beta.1
-```
-
-```json5
-  "devDependencies": {
-    "extension": "2.0.0-beta.1" // i change the version from 'latest' to '2.0.0-beta.1' manually
-  }
 ```
 
 ### `extension create extension_path_test_20240923 --template=new` 
@@ -31,6 +29,14 @@ Removing existing .go-git-it-temp-folder...
  - Initializing git repository for extension_path_test_20240923...
  - Writing .gitignore lines...
  -  Success! Extension extension_path_test_20240923 created.
+```
+
+package.json
+
+```json5
+  "devDependencies": {
+    "extension": "2.0.0-beta.1" // i change the version from 'latest' to '2.0.0-beta.1' manually, and then `npm i`
+  }
 ```
 
 ### `npm run dev` 
