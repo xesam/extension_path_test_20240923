@@ -1,0 +1,35 @@
+{
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDescription__",
+  "default_locale": "en",
+  "manifest_version": 3,
+  "version": "0.0.1",
+  "icons": {
+    "48": "icons/extension_48.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "chrome_url_overrides/newtab.html"
+  },
+  "author": "Your Name",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  },
+  "permissions": [
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background/service_worker.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "/*.json",
+        "/*.js",
+        "/*.css"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
